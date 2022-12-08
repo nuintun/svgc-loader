@@ -10,6 +10,11 @@
     "import": "./esm/index.js",
     "require": "./cjs/index.cjs"
   },
+  "files": [
+    "cjs",
+    "esm",
+    "types"
+  ],
   "scripts": {
     "lint": "tsc --noEmit",
     "clean": "node tools/clean.js",
