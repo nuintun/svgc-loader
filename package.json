@@ -1,0 +1,26 @@
+{
+  "name": "svgox-loader",
+  "version": "0.0.0",
+  "description": "SVGO jsx loader.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nuintun/svgox-loader.git"
+  },
+  "keywords": [
+    "svg",
+    "svgo",
+    "react",
+    "loader",
+    "webpack"
+  ],
+  "author": "nuintun",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nuintun/svgox-loader/issues"
+  },
+  "homepage": "https://github.com/nuintun/svgox-loader#readme"
+}
