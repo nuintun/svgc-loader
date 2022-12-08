@@ -2,9 +2,9 @@
  * @module template
  */
 
-import { SvgrTemplate, Target } from './interface';
+import { SvgoxTemplate, Target } from './interface';
 
-export const commonSvgxTemplate: SvgrTemplate = ({
+export const commonSvgoxTemplate: SvgoxTemplate = ({
   jsx,
   sourceFile,
   targetFile,
@@ -18,7 +18,7 @@ export const ${componentName} = props => {
 };
 `;
 
-export const reactNativeSvgxTemplate: SvgrTemplate = ({
+export const reactNativeSvgoxTemplate: SvgoxTemplate = ({
   jsx,
   components,
   sourceFile,
@@ -35,10 +35,10 @@ export const ${componentName} = props => {
 };
 `;
 
-export function defaultTemplate(target: `${Target}` = 'react-dom'): SvgrTemplate {
+export function defaultTemplate(target: `${Target}` = 'react-dom'): SvgoxTemplate {
   if (target === Target.ReactNative) {
-    return reactNativeSvgxTemplate;
+    return reactNativeSvgoxTemplate;
   } else {
-    return commonSvgxTemplate;
+    return commonSvgoxTemplate;
   }
 }

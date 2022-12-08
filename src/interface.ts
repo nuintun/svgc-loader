@@ -11,7 +11,7 @@ export const enum Target {
   ReactNative = 'react-native'
 }
 
-export interface SvgrTemplateOptions {
+export interface SvgoxTemplateOptions {
   jsx: string;
   sourceFile: string;
   targetFile: string;
@@ -19,15 +19,15 @@ export interface SvgrTemplateOptions {
   componentName: string;
 }
 
-export interface SvgrTemplate {
-  (options: SvgrTemplateOptions): string;
+export interface SvgoxTemplate {
+  (options: SvgoxTemplateOptions): string;
 }
 
 export interface Options extends Pick<Config, 'plugins'> {
   svg: string;
   file: string;
   target?: `${Target}`;
-  template?: SvgrTemplate;
+  template?: SvgoxTemplate;
   svgProps: Record<string, string | boolean>;
 }
 
