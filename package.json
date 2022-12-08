@@ -2,9 +2,24 @@
   "name": "svgox-loader",
   "version": "0.0.0",
   "description": "SVGO jsx loader.",
-  "main": "index.js",
+  "type": "module",
+  "main": "cjs/index.cjs",
+  "module": "esm/index.js",
+  "types": "types/index.d.ts",
+  "exports": {
+    "import": "./esm/index.js",
+    "require": "./cjs/index.cjs"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "tsc --noEmit",
+    "clean": "node tools/clean.js",
+    "format": "prettier --write .",
+    "prepublishOnly": "npm run build",
+    "build:cjs": "rollup -c tools/rollup.cjs.js",
+    "build:esm": "rollup -c tools/rollup.esm.js",
+    "build": "npm run clean && npm run build:main && npm run format",
+    "build:main": "npm run build:cjs && npm run build:esm && npm run build:types",
+    "build:types": "tsc --declaration --emitDeclarationOnly --declarationDir types"
   },
   "repository": {
     "type": "git",
@@ -17,10 +32,27 @@
     "loader",
     "webpack"
   ],
-  "author": "nuintun",
+  "author": {
+    "name": "nuintun",
+    "email": "nuintun@qq.com"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/nuintun/svgox-loader/issues"
   },
-  "homepage": "https://github.com/nuintun/svgox-loader#readme"
+  "homepage": "https://github.com/nuintun/svgox-loader#readme",
+  "dependencies": {
+    "@svgo/jsx": "0.4.2",
+    "camelcase": "^7.0.0",
+    "tslib": "^2.4.1"
+  },
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^10.0.1",
+    "magic-string": "^0.27.0",
+    "prettier": "^2.8.1",
+    "rimraf": "^3.0.2",
+    "rollup": "^3.7.0",
+    "typescript": "^4.9.4",
+    "webpack": "^5.75.0"
+  }
 }
