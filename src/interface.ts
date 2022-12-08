@@ -11,7 +11,7 @@ export const enum Target {
   ReactNative = 'react-native'
 }
 
-export interface SvgxTemplateOptions {
+export interface SvgrTemplateOptions {
   jsx: string;
   sourceFile: string;
   targetFile: string;
@@ -19,13 +19,13 @@ export interface SvgxTemplateOptions {
   componentName: string;
 }
 
-export interface SvgxTemplate {
-  (options: SvgxTemplateOptions): string;
+export interface SvgrTemplate {
+  (options: SvgrTemplateOptions): string;
 }
 
 export interface Options extends Omit<ConvertOptions, 'svg' | 'file' | 'target'> {
   target?: `${Target}`;
-  template?: SvgxTemplate;
+  template?: SvgrTemplate;
 }
 
 export type Schema = Parameters<LoaderContext<Options>['getOptions']>[0];

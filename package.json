@@ -47,12 +47,13 @@
   },
   "homepage": "https://github.com/nuintun/svgox-loader#readme",
   "dependencies": {
-    "@svgo/jsx": "0.4.2",
-    "camelcase": "^7.0.0",
+    "css-tree": "^2.3.0",
+    "svgo": "3.0.2",
     "tslib": "^2.4.1"
   },
   "devDependencies": {
     "@rollup/plugin-typescript": "^10.0.1",
+    "@types/css-tree": "^2.0.0",
     "magic-string": "^0.27.0",
     "prettier": "^2.8.1",
     "rimraf": "^3.0.2",
