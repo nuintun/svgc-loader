@@ -2,8 +2,8 @@
  * @module interface
  */
 
+import { Config } from 'svgo';
 import { LoaderContext } from 'webpack';
-import { Options as ConvertOptions } from '@svgo/jsx';
 
 export const enum Target {
   PReact = 'preact',
@@ -23,9 +23,12 @@ export interface SvgrTemplate {
   (options: SvgrTemplateOptions): string;
 }
 
-export interface Options extends Omit<ConvertOptions, 'svg' | 'file' | 'target'> {
+export interface Options extends Pick<Config, 'plugins'> {
+  svg: string;
+  file: string;
   target?: `${Target}`;
   template?: SvgrTemplate;
+  svgProps: Record<string, string | boolean>;
 }
 
 export type Schema = Parameters<LoaderContext<Options>['getOptions']>[0];
