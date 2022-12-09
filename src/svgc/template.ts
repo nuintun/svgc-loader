@@ -42,11 +42,9 @@ export const reactDOMTemplate: SvgcTemplate = ({
 
 import { memo } from 'react';
 
-const ${componentName} = memo(${propsName} => {
-  return (
-    ${jsx}
-  );
-});
+const ${componentName} = memo(${propsName} => (
+  ${jsx}
+));
 
 export default ${componentName};
 `;
@@ -67,11 +65,9 @@ export const reactNativeTemplate: SvgcTemplate = ({
 import { memo } from 'react';
 import { ${components.join(', ')} } from 'react-native-svg';
 
-const ${componentName} = memo(${propsName} => {
-  return (
-    ${jsx}
-  );
-});
+const ${componentName} = memo(${propsName} => (
+  ${jsx}
+));
 
 export default ${componentName};
 `;
