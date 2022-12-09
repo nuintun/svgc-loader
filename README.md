@@ -1,3 +1,3 @@
-# svgox-loader
+# svgc-loader
 
-SVGO jsx loader
+SVG component loader

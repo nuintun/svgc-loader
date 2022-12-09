@@ -4,7 +4,7 @@
 
 import { Schema } from './interface';
 
-const schema: Schema = {
+export default {
   type: 'object',
   properties: {
     target: {
@@ -41,6 +41,4 @@ const schema: Schema = {
     }
   },
   additionalProperties: false
-};
-
-export default schema;
+} as Schema;

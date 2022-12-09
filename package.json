@@ -1,7 +1,7 @@
 {
-  "name": "svgox-loader",
+  "name": "svgc-loader",
   "version": "0.0.0",
-  "description": "SVGO jsx loader.",
+  "description": "SVG component loader.",
   "type": "module",
   "main": "cjs/index.cjs",
   "module": "esm/index.js",
@@ -28,7 +28,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nuintun/svgox-loader.git"
+    "url": "git+https://github.com/nuintun/svgc-loader.git"
   },
   "keywords": [
     "svg",
@@ -43,9 +43,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/nuintun/svgox-loader/issues"
+    "url": "https://github.com/nuintun/svgc-loader/issues"
   },
-  "homepage": "https://github.com/nuintun/svgox-loader#readme",
+  "homepage": "https://github.com/nuintun/svgc-loader#readme",
   "dependencies": {
     "css-tree": "^2.3.0",
     "svgo": "3.0.2",

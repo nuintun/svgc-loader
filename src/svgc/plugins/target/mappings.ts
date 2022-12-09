@@ -2,7 +2,9 @@
  * @module mappings
  */
 
-export const reactAttributes = {
+export type Mappings = Record<string, string>;
+
+export const reactAttributes: Mappings = {
   // HTML
   'accept-charset': 'acceptCharset',
   'http-equiv': 'httpEquiv',
@@ -493,11 +495,11 @@ export const reactAttributes = {
   zoomandpan: 'zoomAndPan'
 };
 
-export const preactAttributes = {
+export const preactAttributes: Mappings = {
   'xlink:href': 'href'
 };
 
-export const reactNativeSvgTags = {
+export const reactNativeSvgTags: Mappings = {
   circle: 'Circle',
   clipPath: 'ClipPath',
   defs: 'Defs',
