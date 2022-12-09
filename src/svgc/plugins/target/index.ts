@@ -35,7 +35,7 @@ function mappingAttributes(attributes: Attributes, mappings: Mappings): Attribut
  * @description 目标转换插件
  * @param target 编译目标
  */
-export default function svgcTarget(target: `${Target}` = Target.ReactDOM): Plugin {
+export function svgcTarget(target: `${Target}` = Target.ReactDOM): Plugin {
   return {
     name: 'svgc-target',
     fn() {

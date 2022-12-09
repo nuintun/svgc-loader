@@ -5,8 +5,8 @@
 import { optimize } from 'svgo';
 import { Options } from './interface';
 import { getTemplate } from './template';
-import { XastNode } from 'svgo/lib/types';
-import svgcTarget, { Target } from './plugins/target';
+import { svgcXast } from './plugins/xast';
+import { svgcTarget, Target } from './plugins/target';
 import { convertXast, getComponentName, propsName } from './utils';
 
 // 导出接口定义
@@ -17,7 +17,7 @@ export * from './interface';
  * @description 将 SVG 转换为 SVG 组件
  * @param options 配置参数
  */
-export async function convert({
+export function convert({
   svg,
   path,
   svgProps,
@@ -25,34 +25,29 @@ export async function convert({
   plugins = ['preset-default'],
   template = getTemplate(target)
 }: Options): Promise<string> {
-  let xast!: XastNode;
+  return new Promise(resolve => {
+    optimize(svg, {
+      path,
+      plugins: [
+        ...plugins,
+        svgcTarget(target),
+        svgcXast(xast => {
+          const components = new Set<string>();
+          const componentName = getComponentName(path);
+          const jsx = convertXast(xast, components, svgProps);
 
-  optimize(svg, {
-    path,
-    plugins: [
-      ...plugins,
-      svgcTarget(target),
-      {
-        name: 'svgc-xast',
-        fn(root) {
-          xast = root;
-
-          return null;
-        }
-      }
-    ]
-  });
-
-  const components = new Set<string>();
-  const componentName = getComponentName(path);
-  const jsx = convertXast(xast, components, svgProps);
-
-  return template({
-    jsx,
-    path,
-    target,
-    propsName,
-    componentName,
-    components: Array.from(components)
+          resolve(
+            template({
+              jsx,
+              path,
+              target,
+              propsName,
+              componentName,
+              components: Array.from(components)
+            })
+          );
+        })
+      ]
+    });
   });
 }
