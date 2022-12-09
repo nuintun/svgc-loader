@@ -2,11 +2,12 @@
  * @module index
  */
 
-import { convert } from './svgc';
 import { schema } from './schema';
 import { Loader, Options } from './interface';
+import { convert, SvgcTemplate, SvgcTemplateOptions } from './svgc';
 
-export { Options };
+// 导出接口定义
+export { Options, SvgcTemplate, SvgcTemplateOptions };
 
 /**
  * @function loader
