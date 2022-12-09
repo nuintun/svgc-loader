@@ -19,11 +19,9 @@ export const preactTemplate: SvgcTemplate = ({
 
 import { memo } from 'preact/compat';
 
-const ${componentName} = memo(${propsName} => {
-  return (
-    ${jsx}
-  );
-});
+const ${componentName} = memo(${propsName} => (
+  ${jsx}
+));
 
 export default ${componentName};
 `;
