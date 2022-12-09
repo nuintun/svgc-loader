@@ -9,7 +9,7 @@ import { XastNode } from 'svgo/lib/types';
 import svgcTarget, { Target } from './plugins/target';
 import { convertXast, getComponentName, propsName } from './utils';
 
-export default async function convert({
+export async function convert({
   svg,
   path,
   svgProps,

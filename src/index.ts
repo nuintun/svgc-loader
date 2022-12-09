@@ -2,8 +2,8 @@
  * @module index
  */
 
-import convert from './svgc';
-import schema from './schema';
+import { convert } from './svgc';
+import { schema } from './schema';
 import { Loader, Options } from './interface';
 
 export { Options };
