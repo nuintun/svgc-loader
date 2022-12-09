@@ -9,6 +9,14 @@ import { XastNode } from 'svgo/lib/types';
 import svgcTarget, { Target } from './plugins/target';
 import { convertXast, getComponentName, propsName } from './utils';
 
+// 导出接口定义
+export * from './interface';
+
+/**
+ * @function convert
+ * @description 将 SVG 转换为 SVG 组件
+ * @param options 配置参数
+ */
 export async function convert({
   svg,
   path,
