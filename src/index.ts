@@ -6,6 +6,9 @@ import convert from './svgc';
 import schema from './schema';
 import { Loader } from './interface';
 
+/**
+ * @function loader
+ */
 export default (function loader(content, sourceMap, additionalData) {
   const callback = this.async();
   const path = this.resourcePath;

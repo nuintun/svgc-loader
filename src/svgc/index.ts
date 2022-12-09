@@ -4,9 +4,9 @@
 
 import { optimize } from 'svgo';
 import { Options } from './interface';
+import { getTemplate } from './template';
+import svgcTarget from './plugins/target';
 import { XastNode } from 'svgo/lib/types';
-import pluginTarget from './plugins/target';
-import { defaultTemplate } from './template';
 import { convertXast, getComponentName, propsName } from './utils';
 
 export default function convert({
@@ -15,7 +15,7 @@ export default function convert({
   target,
   svgProps,
   plugins = ['preset-default'],
-  template = defaultTemplate(target)
+  template = getTemplate(target)
 }: Options): string {
   let xast!: XastNode;
 
@@ -23,7 +23,7 @@ export default function convert({
     path,
     plugins: [
       ...plugins,
-      pluginTarget(target),
+      svgcTarget(target),
       {
         name: 'svgc-xast',
         fn(root) {

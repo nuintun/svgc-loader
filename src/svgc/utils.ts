@@ -11,10 +11,20 @@ export const propsName = 'props';
 
 const { toString } = Object.prototype;
 
+/**
+ * @function typeOf
+ * @description 获取目标元素类型
+ * @param value 目标元素
+ */
 export function typeOf(value: unknown): string {
   return toString.call(value).slice(8, -1).toLowerCase();
 }
 
+/**
+ * @function pascalcase
+ * @description 帕斯卡命名
+ * @param string 目标字符串
+ */
 export function pascalcase(string: string): string {
   return string
     .replace(/^[a-z]/, match => {
@@ -25,10 +35,20 @@ export function pascalcase(string: string): string {
     });
 }
 
+/**
+ * @function getComponentName
+ * @description 根据文件路径获取组件名称
+ * @param path 文件路径
+ */
 export function getComponentName(path: string): string {
   return `Svgc_${pascalcase(basename(path, extname(path)))}`;
 }
 
+/**
+ * @function convertStyleProperty
+ * @description 标准化属性名
+ * @param property 属性名
+ */
 export function convertStyleProperty(property: string): string {
   if (property.startsWith('--')) {
     return property;
@@ -44,6 +64,11 @@ export function convertStyleProperty(property: string): string {
   });
 }
 
+/**
+ * @function convertStyleToObject
+ * @description 样式字符串解析为样式对象
+ * @param style 样式字符串
+ */
 export function convertStyleToObject(style: string): Record<string, string> {
   const styleObject: Record<string, string> = {};
 
@@ -61,6 +86,13 @@ export function convertStyleToObject(style: string): Record<string, string> {
   return styleObject;
 }
 
+/**
+ * @function convertXastAttributes
+ * @description 转换属性
+ * @param node 当前节点
+ * @param svgProps 属性列表
+ * @param parentNode 父节点
+ */
 export function convertXastAttributes(
   node: XastElement,
   svgProps?: Options['svgProps'],
@@ -108,6 +140,14 @@ export function convertXastAttributes(
   return canSetProps ? `${attrs} {...${propsName}}` : attrs;
 }
 
+/**
+ * @function convertXast
+ * @description 从 AST 转换 SVG 到组件
+ * @param node 当前节点
+ * @param components 引用组件名列表
+ * @param svgProps 属性列表
+ * @param parentNode 父节点
+ */
 export const convertXast = (
   node: XastNode,
   components: Set<string>,
