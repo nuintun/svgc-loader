@@ -9,14 +9,14 @@ import { XastNode } from 'svgo/lib/types';
 import svgcTarget, { Target } from './plugins/target';
 import { convertXast, getComponentName, propsName } from './utils';
 
-export default function convert({
+export default async function convert({
   svg,
   path,
   svgProps,
   target = Target.ReactDOM,
   plugins = ['preset-default'],
   template = getTemplate(target)
-}: Options): string {
+}: Options): Promise<string> {
   let xast!: XastNode;
 
   optimize(svg, {

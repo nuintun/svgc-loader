@@ -16,11 +16,12 @@ export default (function loader(content, sourceMap, additionalData) {
   const path = this.resourcePath;
   const options = this.getOptions(schema);
 
-  try {
-    content = convert({ ...options, path, svg: content });
-  } catch (error) {
-    return callback(error as Error);
-  }
-
-  return callback(null, content, sourceMap, additionalData);
+  convert({ ...options, path, svg: content }).then(
+    content => {
+      callback(null, content, sourceMap, additionalData);
+    },
+    error => {
+      callback(error as Error);
+    }
+  );
 } as Loader);
