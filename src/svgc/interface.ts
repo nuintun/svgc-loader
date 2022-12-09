@@ -3,17 +3,13 @@
  */
 
 import { Config } from 'svgo';
-
-export const enum Target {
-  PReact = 'preact',
-  ReactDOM = 'react-dom',
-  ReactNative = 'react-native'
-}
+import { Target } from './plugins/target';
 
 export interface SvgcTemplateOptions {
   jsx: string;
   path: string;
   propsName: string;
+  target: `${Target}`;
   components: string[];
   componentName: string;
 }

@@ -2,8 +2,14 @@
  * @module index
  */
 
-import { Plugin, Target } from '../../interface';
+import { Plugin } from '../../interface';
 import { Mappings, preactAttributes, reactAttributes, reactNativeSvgTags } from './mappings';
+
+export const enum Target {
+  PReact = 'preact',
+  ReactDOM = 'react-dom',
+  ReactNative = 'react-native'
+}
 
 type Attributes = Record<string, string>;
 

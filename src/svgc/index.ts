@@ -5,15 +5,15 @@
 import { optimize } from 'svgo';
 import { Options } from './interface';
 import { getTemplate } from './template';
-import svgcTarget from './plugins/target';
 import { XastNode } from 'svgo/lib/types';
+import svgcTarget, { Target } from './plugins/target';
 import { convertXast, getComponentName, propsName } from './utils';
 
 export default function convert({
   svg,
   path,
-  target,
   svgProps,
+  target = Target.ReactDOM,
   plugins = ['preset-default'],
   template = getTemplate(target)
 }: Options): string {
@@ -42,6 +42,7 @@ export default function convert({
   return template({
     jsx,
     path,
+    target,
     propsName,
     componentName,
     components: Array.from(components)

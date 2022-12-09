@@ -211,6 +211,6 @@ export const convertXast = (
     case 'instruction':
       return '';
     default:
-      throw new SyntaxError(`Unexpected node type "${(node as XastNode).type}"`);
+      throw new SyntaxError(`Unexpected node type: "${(node as XastNode).type}"`);
   }
 };
