@@ -1,6 +1,6 @@
 {
   "name": "svgc-loader",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "SVG component loader.",
   "type": "module",
   "main": "cjs/index.cjs",
@@ -16,6 +16,7 @@
     "types"
   ],
   "scripts": {
+    "test": "node tests",
     "lint": "tsc --noEmit",
     "clean": "node tools/clean.js",
     "format": "prettier --write .",
