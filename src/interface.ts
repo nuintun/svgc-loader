@@ -2,8 +2,10 @@
  * @module interface
  */
 
-import { Options } from './svgc/interface';
+import { Options as SvgcOptions } from './svgc/interface';
 import { LoaderContext, LoaderDefinitionFunction } from 'webpack';
+
+export type Options = Omit<SvgcOptions, 'svg' | 'path'>;
 
 export type Loader = LoaderDefinitionFunction<Options>;
 

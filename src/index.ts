@@ -4,7 +4,9 @@
 
 import convert from './svgc';
 import schema from './schema';
-import { Loader } from './interface';
+import { Loader, Options } from './interface';
+
+export { Options };
 
 /**
  * @function loader

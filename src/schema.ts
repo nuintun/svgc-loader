@@ -8,7 +8,7 @@ export default {
   type: 'object',
   properties: {
     target: {
-      description: 'Target for svgo jsx convert.',
+      description: 'Target for svgc convert.',
       enum: ['preact', 'react-dom', 'react-native']
     },
     svgProps: {
@@ -18,26 +18,48 @@ export default {
     },
     plugins: {
       type: 'array',
-      description: 'Plugins for svgo jsx convert.',
-      items: {
-        type: 'object',
-        properties: {
-          name: {
-            type: 'string',
-            description: 'Name of svgo plugin.'
-          },
-          fn: {
-            instanceof: 'Function',
-            description: 'Processor of svgo plugin.'
-          }
+      description: 'Plugins for svgc convert.',
+      items: [
+        {
+          type: 'string',
+          description: 'Name of svgo plugin.'
         },
-        required: ['name', 'fn'],
-        additionalProperties: false
-      }
+        {
+          type: 'object',
+          properties: {
+            name: {
+              type: 'string',
+              description: 'Name of svgo plugin.'
+            },
+            params: {
+              type: 'object',
+              additionalProperties: true,
+              description: 'Params of svgo plugin.'
+            }
+          },
+          required: ['name'],
+          additionalProperties: false
+        },
+        {
+          type: 'object',
+          properties: {
+            name: {
+              type: 'string',
+              description: 'Name of svgo plugin.'
+            },
+            fn: {
+              instanceof: 'Function',
+              description: 'Processor of svgo plugin.'
+            }
+          },
+          required: ['name', 'fn'],
+          additionalProperties: false
+        }
+      ]
     },
     template: {
       instanceof: 'Function',
-      description: 'Template for svgo jsx convert.'
+      description: 'Template for svgc convert.'
     }
   },
   additionalProperties: false
