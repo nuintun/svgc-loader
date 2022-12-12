@@ -3,7 +3,8 @@
  */
 
 import { schema } from './schema';
-import { Loader, Options } from './interface';
+import { Options } from './interface';
+import { LoaderDefinition } from 'webpack';
 import { convert, SvgcTemplate, SvgcTemplateOptions } from './svgc';
 
 // 导出接口定义
@@ -25,4 +26,4 @@ export default (function loader(content, sourceMap, additionalData) {
       callback(error as Error);
     }
   );
-} as Loader);
+} as LoaderDefinition<Options>);
