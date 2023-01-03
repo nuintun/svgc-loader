@@ -70,11 +70,11 @@
   },
   "devDependencies": {
     "@rollup/plugin-typescript": "^10.0.1",
-    "@types/css-tree": "^2.0.0",
+    "@types/css-tree": "^2.0.1",
     "magic-string": "^0.27.0",
     "prettier": "^2.8.1",
     "rimraf": "^3.0.2",
-    "rollup": "^3.9.0",
+    "rollup": "^3.9.1",
     "typescript": "^4.9.4",
     "webpack": "^5.75.0"
   }
