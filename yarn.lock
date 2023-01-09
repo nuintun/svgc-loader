@@ -42,10 +42,10 @@
     "@jridgewell/resolve-uri" "3.1.0"
     "@jridgewell/sourcemap-codec" "1.4.14"
 
-"@rollup/plugin-typescript@^10.0.1":
-  version "10.0.1"
-  resolved "https://registry.npmjs.org/@rollup/plugin-typescript/-/plugin-typescript-10.0.1.tgz#270b515b116ea28320e6bb62451c4767d49072d6"
-  integrity sha512-wBykxRLlX7EzL8BmUqMqk5zpx2onnmRMSw/l9M1sVfkJvdwfxogZQVNUM9gVMJbjRLDR5H6U0OMOrlDGmIV45A==
+"@rollup/plugin-typescript@^11.0.0":
+  version "11.0.0"
+  resolved "https://registry.npmjs.org/@rollup/plugin-typescript/-/plugin-typescript-11.0.0.tgz#f136272d1df5209daca0cb6f171c574b1d505545"
+  integrity sha512-goPyCWBiimk1iJgSTgsehFD5OOFHiAknrRJjqFCudcW8JtWiBlK284Xnn4flqMqg6YAjVG/EE+3aVzrL5qNSzQ==
   dependencies:
     "@rollup/pluginutils" "^5.0.1"
     resolve "^1.22.1"
@@ -295,9 +295,9 @@ buffer-from@^1.0.0:
   integrity sha512-E+XQCRwSbaaiChtv6k6Dwgc+bx+Bs6vuKJHHl5kox/BaKbhiXzqQOwK4cO22yElGp2OCmjwVhT3HmxgyPGnJfQ==
 
 caniuse-lite@^1.0.30001400:
-  version "1.0.30001441"
-  resolved "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001441.tgz#987437b266260b640a23cd18fbddb509d7f69f3e"
-  integrity sha512-OyxRR4Vof59I3yGWXws6i908EtGbMzVUi3ganaZQHmydk1iwDhRnvaPG2WaR0KcqrDFKrxVZHULT396LEPhXfg==
+  version "1.0.30001442"
+  resolved "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001442.tgz#40337f1cf3be7c637b061e2f78582dc1daec0614"
+  integrity sha512-239m03Pqy0hwxYPYR5JwOIxRJfLTWtle9FV8zosfV5pHg+/51uD4nxcUlM8+mWWGfwKtt8lJNHnD3cWw9VZ6ow==
 
 chrome-trace-event@^1.0.2:
   version "1.0.3"
@@ -639,10 +639,10 @@ picomatch@^2.3.1:
   resolved "https://registry.npmjs.org/picomatch/-/picomatch-2.3.1.tgz#3ba3833733646d9d3e4995946c1365a67fb07a42"
   integrity sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA==
 
-prettier@^2.8.1:
-  version "2.8.1"
-  resolved "https://registry.npmjs.org/prettier/-/prettier-2.8.1.tgz#4e1fd11c34e2421bc1da9aea9bd8127cd0a35efc"
-  integrity sha512-lqGoSJBQNJidqCHE80vqZJHWHRFoNYsSpP9AjFhlhi9ODCJA541svILes/+/1GM3VaL/abZi7cpFzOpdR9UPKg==
+prettier@^2.8.2:
+  version "2.8.2"
+  resolved "https://registry.npmjs.org/prettier/-/prettier-2.8.2.tgz#c4ea1b5b454d7c4b59966db2e06ed7eec5dfd160"
+  integrity sha512-BtRV9BcncDyI2tsuS19zzhzoxD8Dh8LiCx7j7tHzrkz8GFXAexeWFdi22mjE1d16dftH2qNaytVxqiRTGlMfpw==
 
 punycode@^2.1.0:
   version "2.1.1"
