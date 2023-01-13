@@ -73,8 +73,8 @@
     "@types/css-tree": "^2.0.1",
     "magic-string": "^0.27.0",
     "prettier": "^2.8.2",
-    "rimraf": "^3.0.2",
-    "rollup": "^3.9.1",
+    "rimraf": "^4.0.4",
+    "rollup": "^3.10.0",
     "typescript": "^4.9.4",
     "webpack": "^5.75.0"
   }
