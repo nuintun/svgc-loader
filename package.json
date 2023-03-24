@@ -57,10 +57,10 @@
     "@types/css-tree": "^2.3.1",
     "magic-string": "^0.30.0",
     "prettier": "^2.8.6",
-    "rimraf": "^4.4.0",
-    "rollup": "^3.20.0",
+    "rimraf": "^4.4.1",
+    "rollup": "^3.20.1",
     "typescript": "^5.0.2",
-    "webpack": "^5.76.2"
+    "webpack": "^5.76.3"
   },
   "peerDependencies": {
     "preact": "*",
