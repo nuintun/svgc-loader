@@ -114,7 +114,7 @@ export function convertXastAttributes(
     }
   }
 
-  const canSetProps = parentNode?.type === 'root';
+  const canSetProps = !parentNode || parentNode.type === 'root';
 
   if (canSetProps && svgProps) {
     const customProps = Object.entries(svgProps);
