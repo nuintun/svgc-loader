@@ -1,6 +1,6 @@
 {
   "name": "svgc-loader",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "SVG component loader.",
   "type": "module",
   "main": "cjs/index.cjs",
