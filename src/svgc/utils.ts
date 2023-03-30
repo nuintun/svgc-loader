@@ -137,7 +137,17 @@ export function convertXastAttributes(
     attrs += `${name}=${value}`;
   }
 
-  return canSetProps ? `${attrs} {...${propsName}}` : attrs;
+  const hasAttrs = attrs !== '';
+
+  if (canSetProps) {
+    if (hasAttrs) {
+      return ` ${attrs} {...${propsName}}`;
+    }
+
+    return ` {...${propsName}}`;
+  }
+
+  return hasAttrs ? ` ${attrs}` : attrs;
 }
 
 /**
@@ -187,7 +197,7 @@ export const convertXast = (
       const attributes = convertXastAttributes(node, svgProps, parentNode);
 
       if (node.children.length === 0) {
-        return `<${name} ${attributes} />`;
+        return `<${name}${attributes} />`;
       }
 
       const { children } = node;
@@ -198,7 +208,7 @@ export const convertXast = (
         renderedChildren += convertXast(child, components, svgProps, node);
       }
 
-      return `<${name} ${attributes}>${renderedChildren}</${name}>`;
+      return `<${name}${attributes}>${renderedChildren}</${name}>`;
     }
     case 'text':
       return `{${JSON.stringify(node.value)}}`;
