@@ -53,14 +53,14 @@
     "tslib": "^2.5.0"
   },
   "devDependencies": {
-    "@rollup/plugin-typescript": "^11.0.0",
+    "@rollup/plugin-typescript": "^11.1.0",
     "@types/css-tree": "^2.3.1",
     "magic-string": "^0.30.0",
     "prettier": "^2.8.7",
     "rimraf": "^4.4.1",
     "rollup": "^3.20.2",
     "typescript": "^5.0.3",
-    "webpack": "^5.77.0"
+    "webpack": "^5.78.0"
   },
   "peerDependencies": {
     "preact": "*",
