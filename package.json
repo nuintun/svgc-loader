@@ -60,7 +60,7 @@
     "rimraf": "^5.0.0",
     "rollup": "^3.20.6",
     "typescript": "^5.0.4",
-    "webpack": "^5.79.0"
+    "webpack": "^5.80.0"
   },
   "peerDependencies": {
     "preact": "*",
