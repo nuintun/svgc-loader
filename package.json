@@ -60,8 +60,7 @@
     "prettier": "^2.8.8",
     "rimraf": "^5.0.0",
     "rollup": "^3.21.7",
-    "typescript": "^5.0.4",
-    "webpack": "^5.82.1"
+    "typescript": "^5.0.4"
   },
   "peerDependencies": {
     "preact": "*",
