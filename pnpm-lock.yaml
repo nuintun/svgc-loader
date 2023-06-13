@@ -22,6 +22,9 @@ devDependencies:
   '@types/css-tree':
     specifier: ^2.3.1
     version: 2.3.1
+  '@types/node':
+    specifier: ^20.3.0
+    version: 20.3.0
   magic-string:
     specifier: ^0.30.0
     version: 0.30.0
