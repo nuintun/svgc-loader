@@ -2,7 +2,7 @@
  * @module index
  */
 
-import { Plugin } from '../../interface';
+import { Plugin } from '/svgc/interface';
 import { Mappings, preactAttributes, reactAttributes, reactNativeSvgTags } from './mappings';
 
 export const enum Target {

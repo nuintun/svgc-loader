@@ -2,7 +2,7 @@
  * @module xast
  */
 
-import { Plugin } from '../interface';
+import { Plugin } from '/svgc/interface';
 import { XastNode } from 'svgo/lib/types';
 
 /**
