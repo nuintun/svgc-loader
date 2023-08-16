@@ -58,7 +58,7 @@
     "@types/css-tree": "^2.3.1",
     "@types/node": "^20.5.0",
     "magic-string": "^0.30.2",
-    "prettier": "^3.0.1",
+    "prettier": "^3.0.2",
     "rimraf": "^5.0.1",
     "rollup": "^3.28.0",
     "tsc-alias": "^1.8.7",

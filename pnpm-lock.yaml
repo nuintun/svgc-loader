@@ -29,8 +29,8 @@ devDependencies:
     specifier: ^0.30.2
     version: 0.30.2
   prettier:
-    specifier: ^3.0.1
-    version: 3.0.1
+    specifier: ^3.0.2
+    version: 3.0.2
   rimraf:
     specifier: ^5.0.1
     version: 5.0.1
@@ -407,8 +407,8 @@ packages:
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
     dependencies:
-      caniuse-lite: 1.0.30001520
-      electron-to-chromium: 1.4.490
+      caniuse-lite: 1.0.30001521
+      electron-to-chromium: 1.4.492
       node-releases: 2.0.13
       update-browserslist-db: 1.0.11(browserslist@4.21.10)
     dev: true
@@ -417,8 +417,8 @@ packages:
     resolution: {integrity: sha512-E+XQCRwSbaaiChtv6k6Dwgc+bx+Bs6vuKJHHl5kox/BaKbhiXzqQOwK4cO22yElGp2OCmjwVhT3HmxgyPGnJfQ==}
     dev: true
 
-  /caniuse-lite@1.0.30001520:
-    resolution: {integrity: sha512-tahF5O9EiiTzwTUqAeFjIZbn4Dnqxzz7ktrgGlMYNLH43Ul26IgTMH/zvL3DG0lZxBYnlT04axvInszUsZULdA==}
+  /caniuse-lite@1.0.30001521:
+    resolution: {integrity: sha512-fnx1grfpEOvDGH+V17eccmNjucGUnCbP6KL+l5KqBIerp26WK/+RQ7CIDE37KGJjaPyqWXXlFUyKiWmvdNNKmQ==}
     dev: true
 
   /chokidar@3.5.3:
@@ -551,8 +551,8 @@ packages:
     resolution: {integrity: sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==}
     dev: true
 
-  /electron-to-chromium@1.4.490:
-    resolution: {integrity: sha512-6s7NVJz+sATdYnIwhdshx/N/9O6rvMxmhVoDSDFdj6iA45gHR8EQje70+RYsF4GeB+k0IeNSBnP7yG9ZXJFr7A==}
+  /electron-to-chromium@1.4.492:
+    resolution: {integrity: sha512-36K9b/6skMVwAIEsC7GiQ8I8N3soCALVSHqWHzNDtGemAcI9Xu8hP02cywWM0A794rTHm0b0zHPeLJHtgFVamQ==}
     dev: true
 
   /emoji-regex@8.0.0:
@@ -688,7 +688,7 @@ packages:
     hasBin: true
     dependencies:
       foreground-child: 3.1.1
-      jackspeak: 2.2.3
+      jackspeak: 2.3.0
       minimatch: 9.0.3
       minipass: 7.0.3
       path-scurry: 1.10.1
@@ -766,8 +766,8 @@ packages:
     resolution: {integrity: sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw==}
     dev: true
 
-  /jackspeak@2.2.3:
-    resolution: {integrity: sha512-pF0kfjmg8DJLxDrizHoCZGUFz4P4czQ3HyfW4BU0ffebYkzAVlBywp5zaxW/TM+r0sGbmrQdi8EQQVTJFxnGsQ==}
+  /jackspeak@2.3.0:
+    resolution: {integrity: sha512-uKmsITSsF4rUWQHzqaRUuyAir3fZfW3f202Ee34lz/gZCi970CPZwyQXLGNgWJvvZbvFyzeyGq0+4fcG/mBKZg==}
     engines: {node: '>=14'}
     dependencies:
       '@isaacs/cliui': 8.0.2
@@ -918,8 +918,8 @@ packages:
       queue-lit: 1.5.0
     dev: true
 
-  /prettier@3.0.1:
-    resolution: {integrity: sha512-fcOWSnnpCrovBsmFZIGIy9UqK2FaI7Hqax+DIO0A9UxeVoY4iweyaFjS5TavZN97Hfehph0nhsZnjlVKzEQSrQ==}
+  /prettier@3.0.2:
+    resolution: {integrity: sha512-o2YR9qtniXvwEZlOKbveKfDQVyqxbEIWn48Z8m3ZJjBjcCmUy3xZGIv+7AkaeuaTr6yPXJjwv07ZWlsWbEy1rQ==}
     engines: {node: '>=14'}
     hasBin: true
     dev: true
