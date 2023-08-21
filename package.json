@@ -1,6 +1,6 @@
 {
   "name": "svgc-loader",
-  "version": "0.1.17",
+  "version": "0.1.18",
   "description": "SVG component loader.",
   "type": "module",
   "main": "cjs/index.cjs",
@@ -51,12 +51,12 @@
   "dependencies": {
     "css-tree": "^2.3.1",
     "svgo": "^3.0.2",
-    "tslib": "^2.6.1"
+    "tslib": "^2.6.2"
   },
   "devDependencies": {
     "@rollup/plugin-typescript": "^11.1.2",
     "@types/css-tree": "^2.3.1",
-    "@types/node": "^20.5.0",
+    "@types/node": "^20.5.1",
     "magic-string": "^0.30.2",
     "prettier": "^3.0.2",
     "rimraf": "^5.0.1",
