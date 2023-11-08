@@ -56,7 +56,7 @@
   "devDependencies": {
     "@rollup/plugin-typescript": "^11.1.5",
     "@types/css-tree": "^2.3.4",
-    "@types/node": "^20.8.10",
+    "@types/node": "^20.9.0",
     "magic-string": "^0.30.5",
     "prettier": "^3.0.3",
     "rimraf": "^5.0.5",
