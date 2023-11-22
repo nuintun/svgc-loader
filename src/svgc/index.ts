@@ -20,14 +20,20 @@ export * from './interface';
 export function convert({
   svg,
   path,
+  js2svg,
   svgProps,
+  multipass,
+  floatPrecision,
   target = Target.ReactDOM,
   plugins = ['preset-default'],
   template = getTemplate(target)
-}: Options): Promise<string> {
+}: Options & { path: string }): Promise<string> {
   return new Promise(resolve => {
     optimize(svg, {
       path,
+      js2svg,
+      multipass,
+      floatPrecision,
       plugins: [
         ...plugins,
         svgcTarget(target),

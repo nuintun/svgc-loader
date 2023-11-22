@@ -20,12 +20,12 @@ export interface SvgcTemplate {
 
 export type Plugin = ArrayItem<Options['plugins']>;
 
-export interface Options extends Pick<Config, 'plugins'> {
+export type ArrayItem<T> = T extends Array<infer I> ? I : never;
+
+export interface Options extends Omit<Config, 'path' | 'datauri'> {
   svg: string;
-  path: string;
   target?: `${Target}`;
   template?: SvgcTemplate;
+  configFile?: string | false;
   svgProps: Record<string, unknown>;
 }
-
-export type ArrayItem<T> = T extends Array<infer I> ? I : never;
