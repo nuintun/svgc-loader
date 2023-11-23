@@ -2,9 +2,9 @@
  * @module index
  */
 
-import { Config } from 'svgo';
 import { schema } from './schema';
 import { Options } from './interface';
+import { Config, loadConfig } from 'svgo';
 import { LoaderDefinition } from 'webpack';
 import { convert, SvgcTemplate, SvgcTemplateOptions } from './svgc';
 
@@ -19,8 +19,7 @@ async function resolveConfig(
     return null;
   }
 
-  // @ts-ignore
-  return await loadConfig(configFile, context);
+  return await loadConfig(configFile as string, context);
 }
 
 /**
