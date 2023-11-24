@@ -56,11 +56,11 @@
   "devDependencies": {
     "@rollup/plugin-typescript": "^11.1.5",
     "@types/css-tree": "^2.3.4",
-    "@types/node": "^20.9.4",
+    "@types/node": "^20.10.0",
     "magic-string": "^0.30.5",
     "prettier": "^3.1.0",
     "rimraf": "^5.0.5",
-    "rollup": "^4.5.1",
+    "rollup": "^4.5.2",
     "tsc-alias": "^1.8.8",
     "typescript": "^5.3.2",
     "webpack": "^5.89.0"
