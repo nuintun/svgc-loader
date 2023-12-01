@@ -15,11 +15,18 @@ async function resolveConfig(
   configFile?: string | false,
   context?: string
 ): Promise<Config | null> {
+  // 如果禁用配置文件，返回 null
   if (configFile === false) {
     return null;
   }
 
-  return await loadConfig(configFile as string, context);
+  // 如果没有指定配置文件，使用默认配置
+  if (configFile == null) {
+    return await loadConfig(null, context);
+  }
+
+  // 否则使用指定的配置文件
+  return await loadConfig(configFile, context);
 }
 
 /**
