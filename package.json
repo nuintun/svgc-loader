@@ -50,7 +50,7 @@
   },
   "dependencies": {
     "css-tree": "^2.3.1",
-    "svgo": "^3.0.4",
+    "svgo": "^3.0.5",
     "tslib": "^2.6.2"
   },
   "devDependencies": {
