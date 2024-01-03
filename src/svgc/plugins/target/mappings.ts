@@ -155,7 +155,6 @@ export const reactAttributes: Mappings = {
   width: 'width',
   wmode: 'wmode',
   wrap: 'wrap',
-
   // SVG
   'accent-height': 'accentHeight',
   'alignment-baseline': 'alignmentBaseline',

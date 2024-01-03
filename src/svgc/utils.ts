@@ -54,7 +54,7 @@ export function convertStyleProperty(property: string): string {
     return property;
   }
 
-  // Microsoft vendor-prefixes are uniquely cased
+  // Microsoft 标准前缀处理
   if (property.startsWith('-ms-')) {
     property = property.slice(1);
   }
@@ -98,9 +98,7 @@ export function convertXastAttributes(
   svgProps?: Options['svgProps'],
   parentNode?: XastParent | null
 ): string {
-  // Use map to override existing attributes with passed props
   const props = new Map();
-
   const attributes = Object.entries(node.attributes);
 
   for (const [name, value] of attributes) {
@@ -109,7 +107,7 @@ export function convertXastAttributes(
 
       props.set(name, `{${JSON.stringify(styleObject)}}`);
     } else if (name.includes(':') === false) {
-      // Skip attributes with namespaces which are invalid jsx syntax
+      // 跳过具有无效 jsx 语法命名空间的属性
       props.set(name, JSON.stringify(value));
     }
   }
@@ -120,7 +118,6 @@ export function convertXastAttributes(
     const customProps = Object.entries(svgProps);
 
     for (const [name, value] of customProps) {
-      // Delete previous prop before setting to reset order
       switch (typeOf(value)) {
         case 'string':
           props.set(name, JSON.stringify(value));
@@ -189,7 +186,7 @@ export const convertXast = (
     case 'element': {
       const { name } = node;
 
-      // collect all components names
+      // 收集所有组件名称
       if (name.startsWith(name[0].toUpperCase())) {
         components.add(name);
       }
@@ -211,7 +208,6 @@ export const convertXast = (
       return `<${name}${attributes}>${renderedChildren}</${name}>`;
     }
     case 'text':
-      return `{${JSON.stringify(node.value)}}`;
     case 'cdata':
       return `{${JSON.stringify(node.value)}}`;
     case 'comment':
