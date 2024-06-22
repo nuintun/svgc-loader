@@ -502,7 +502,7 @@ export const reactAttributes: Mappings = {
   zoomandpan: 'zoomAndPan'
 };
 
-// @see https://github.com/software-mansion/react-native-svg
+// @see https://github.com/software-mansion/react-native-svg/tree/main/src/elements
 export const reactNativeSvgTags: Mappings = {
   circle: 'Circle',
   clipPath: 'ClipPath',
@@ -521,6 +521,7 @@ export const reactNativeSvgTags: Mappings = {
   polyline: 'Polyline',
   radialGradient: 'RadialGradient',
   rect: 'Rect',
+  shape: 'Shape',
   stop: 'Stop',
   svg: 'Svg',
   symbol: 'Symbol',
