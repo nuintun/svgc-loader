@@ -3,7 +3,7 @@
  */
 
 import { Plugin } from '/svgc/interface';
-import { Mappings, preactAttributes, reactAttributes, reactNativeSvgTags } from './mappings';
+import { reactAttributes, reactNativeSvgTags } from './mappings';
 
 export const enum Target {
   PReact = 'preact',
@@ -17,14 +17,13 @@ type Attributes = Record<string, string>;
  * @function mappingAttributes
  * @description 映射属性
  * @param attributes 原始属性
- * @param mappings 映射属性
  */
-function mappingAttributes(attributes: Attributes, mappings: Mappings): Attributes {
+function mappingAttributes(attributes: Attributes): Attributes {
   const attrs = Object.entries(attributes);
   const newAttributes: Record<string, string> = {};
 
   for (const [name, value] of attrs) {
-    newAttributes[mappings[name] ?? name] = value;
+    newAttributes[reactAttributes[name] ?? name] = value;
   }
 
   return newAttributes;
@@ -53,19 +52,17 @@ export function svgcTarget(target: `${Target}` = Target.ReactDOM): Plugin {
               } else {
                 node.name = reactNativeSvgTags[name];
 
-                node.attributes = mappingAttributes(node.attributes, reactNativeSvgTags);
+                node.attributes = mappingAttributes(node.attributes);
               }
             }
           }
         };
       }
 
-      const mappings = target === Target.PReact ? preactAttributes : reactAttributes;
-
       return {
         element: {
           enter: node => {
-            node.attributes = mappingAttributes(node.attributes, mappings);
+            node.attributes = mappingAttributes(node.attributes);
           }
         }
       };

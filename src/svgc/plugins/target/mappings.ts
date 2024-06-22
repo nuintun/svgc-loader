@@ -4,6 +4,7 @@
 
 export type Mappings = Record<string, string>;
 
+// @see https://github.com/facebook/react/blob/main/packages/react-dom-bindings/src/shared/possibleStandardNames.js
 export const reactAttributes: Mappings = {
   // HTML
   'accept-charset': 'acceptCharset',
@@ -57,6 +58,7 @@ export const reactAttributes: Mappings = {
   draggable: 'draggable',
   enctype: 'encType',
   enterkeyhint: 'enterKeyHint',
+  fetchpriority: 'fetchPriority',
   for: 'htmlFor',
   form: 'form',
   formaction: 'formAction',
@@ -77,6 +79,7 @@ export const reactAttributes: Mappings = {
   id: 'id',
   imagesizes: 'imageSizes',
   imagesrcset: 'imageSrcSet',
+  inert: 'inert',
   innerhtml: 'innerHTML',
   inputmode: 'inputMode',
   integrity: 'integrity',
@@ -212,6 +215,7 @@ export const reactAttributes: Mappings = {
   'text-anchor': 'textAnchor',
   'text-decoration': 'textDecoration',
   'text-rendering': 'textRendering',
+  'transform-origin': 'transformOrigin',
   'underline-position': 'underlinePosition',
   'underline-thickness': 'underlineThickness',
   'unicode-bidi': 'unicodeBidi',
@@ -380,6 +384,9 @@ export const reactAttributes: Mappings = {
   pointsatx: 'pointsAtX',
   pointsaty: 'pointsAtY',
   pointsatz: 'pointsAtZ',
+  popover: 'popover',
+  popovertarget: 'popoverTarget',
+  popovertargetaction: 'popoverTargetAction',
   prefix: 'prefix',
   preservealpha: 'preserveAlpha',
   preserveaspectratio: 'preserveAspectRatio',
@@ -442,6 +449,7 @@ export const reactAttributes: Mappings = {
   textrendering: 'textRendering',
   to: 'to',
   transform: 'transform',
+  transformorigin: 'transformOrigin',
   typeof: 'typeof',
   u1: 'u1',
   u2: 'u2',
@@ -494,10 +502,7 @@ export const reactAttributes: Mappings = {
   zoomandpan: 'zoomAndPan'
 };
 
-export const preactAttributes: Mappings = {
-  'xlink:href': 'href'
-};
-
+// @see https://github.com/software-mansion/react-native-svg
 export const reactNativeSvgTags: Mappings = {
   circle: 'Circle',
   clipPath: 'ClipPath',
