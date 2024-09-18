@@ -32,7 +32,7 @@ async function resolveConfig(
 /**
  * @function loader
  */
-export default (function loader(content, sourceMap, additionalData) {
+const loader: LoaderDefinition<Options> = function loader(content, sourceMap, additionalData) {
   const callback = this.async();
   const path = this.resourcePath;
   const { configFile, ...options } = this.getOptions(schema);
@@ -52,4 +52,6 @@ export default (function loader(content, sourceMap, additionalData) {
       callback(error);
     }
   );
-} satisfies LoaderDefinition<Options>);
+};
+
+export default loader;
