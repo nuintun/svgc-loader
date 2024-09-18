@@ -44,12 +44,12 @@ export default (function loader(content, sourceMap, additionalData) {
           callback(null, content, sourceMap, additionalData);
         },
         error => {
-          callback(error as Error);
+          callback(error);
         }
       );
     },
     error => {
-      callback(error as Error);
+      callback(error);
     }
   );
-} as LoaderDefinition<Options>);
+} satisfies LoaderDefinition<Options>);
