@@ -11,10 +11,10 @@ import { SvgcTemplate } from './interface';
  * @param options 模板参数
  */
 export const preactTemplate: SvgcTemplate = ({
-  jsx,
-  path,
-  propsName,
-  componentName
+  jsx, // jsx 字符串
+  path, // 文件路径
+  propsName, // props 字符串
+  componentName // 组件名称
 }) => `// Generated from ${path}
 
 import { memo } from 'preact/compat';
@@ -32,10 +32,10 @@ export default ${componentName};
  * @param options 模板参数
  */
 export const reactDOMTemplate: SvgcTemplate = ({
-  jsx,
-  path,
-  propsName,
-  componentName
+  jsx, // jsx 字符串
+  path, // 文件路径
+  propsName, // props 字符串
+  componentName // 组件名称
 }) => `// Generated from ${path}
 
 import { memo } from 'react';
@@ -53,11 +53,11 @@ export default ${componentName};
  * @param options 模板参数
  */
 export const reactNativeTemplate: SvgcTemplate = ({
-  jsx,
-  path,
-  propsName,
-  components,
-  componentName
+  jsx, // jsx 字符串
+  path, // 文件路径
+  propsName, // props 字符串
+  components, // 组件列表
+  componentName // 组件名称
 }) => `// Generated from ${path}
 
 import { memo } from 'react';

@@ -11,10 +11,7 @@ import { convert, SvgcTemplate, SvgcTemplateOptions } from './svgc';
 // 导出接口定义
 export { Options, SvgcTemplate, SvgcTemplateOptions };
 
-async function resolveConfig(
-  configFile?: string | false,
-  context?: string
-): Promise<Config | null> {
+async function resolveConfig(configFile?: string | false, context?: string): Promise<Config | null> {
   // 如果禁用配置文件，返回 null
   if (configFile === false) {
     return null;
