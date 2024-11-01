@@ -2,8 +2,8 @@
  * @module index
  */
 
-import { createRequire } from 'module';
-import { readFile } from 'fs/promises';
+import { createRequire } from 'node:module';
+import { readFile } from 'node:fs/promises';
 import { convert } from '../esm/svgc/index.js';
 
 const { resolve } = createRequire(import.meta.url);
