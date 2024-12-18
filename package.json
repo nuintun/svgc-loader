@@ -1,20 +1,17 @@
 {
   "name": "svgc-loader",
-  "version": "0.2.17",
+  "version": "0.3.0",
   "description": "SVG component loader.",
   "type": "module",
   "main": "cjs/index.cjs",
   "module": "esm/index.js",
-  "types": "types/index.d.ts",
   "exports": {
     "import": "./esm/index.js",
-    "require": "./cjs/index.cjs",
-    "types": "./types/index.d.ts"
+    "require": "./cjs/index.cjs"
   },
   "files": [
     "cjs",
-    "esm",
-    "types"
+    "esm"
   ],
   "engines": {
     "node": ">=14.0.0"
@@ -40,33 +37,33 @@
   },
   "homepage": "https://github.com/nuintun/svgc-loader#readme",
   "scripts": {
-    "test": "node tests",
     "lint": "tsc --noEmit",
+    "test": "node tests/index.js",
     "clean": "node tools/clean.js",
     "prepublishOnly": "npm run build",
     "build:cjs": "rollup -c tools/rollup.cjs.js",
     "build:esm": "rollup -c tools/rollup.esm.js",
+    "build:fix-types": "node tools/fix-types.js",
     "format": "prettier --write . --ignore-path .prettierignore",
     "build": "npm run clean && npm run build:main && npm run format",
-    "build:main": "npm run build:cjs && npm run build:esm && npm run build:types",
-    "build:types": "tsc --declaration --emitDeclarationOnly --declarationDir types && node tools/fix-types.js"
+    "build:main": "npm run build:cjs && npm run build:esm && npm run build:fix-types"
   },
   "dependencies": {
-    "css-tree": "^3.0.1",
+    "css-tree": "^3.1.0",
     "svgo": "^3.3.2",
     "tslib": "^2.8.1"
   },
   "devDependencies": {
-    "@rollup/plugin-typescript": "^12.1.1",
+    "@rollup/plugin-typescript": "^12.1.2",
     "@types/css-tree": "^2.3.9",
-    "@types/node": "^22.10.1",
-    "magic-string": "^0.30.14",
-    "prettier": "^3.4.1",
+    "@types/node": "^22.10.2",
+    "dts-paths": "^1.0.1",
+    "magic-string": "^0.30.17",
+    "prettier": "^3.4.2",
     "rimraf": "^6.0.1",
-    "rollup": "^4.28.0",
-    "tsc-alias": "^1.8.10",
+    "rollup": "^4.28.1",
     "typescript": "^5.7.2",
-    "webpack": "^5.97.0"
+    "webpack": "^5.97.1"
   },
   "peerDependencies": {
     "@rspack/core": "^1.0.0",
