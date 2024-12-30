@@ -25,8 +25,8 @@ importers:
         specifier: ^1.1.8
         version: 1.1.8
       '@types/css-tree':
-        specifier: ^2.3.9
-        version: 2.3.9
+        specifier: ^2.3.10
+        version: 2.3.10
       '@types/node':
         specifier: ^22.10.2
         version: 22.10.2
@@ -280,8 +280,8 @@ packages:
   '@ts-morph/common@0.25.0':
     resolution: {integrity: sha512-kMnZz+vGGHi4GoHnLmMhGNjm44kGtKUXGnOvrKmMwAuvNjM/PgKVGfUnL7IDvK7Jb2QQ82jq3Zmp04Gy+r3Dkg==}
 
-  '@types/css-tree@2.3.9':
-    resolution: {integrity: sha512-g1FE6xkPDP4tsccmTd6jIugjKZdxIDqAf9h2pc+4LsGgYbOyfa9phNjBHYbm6FtwIlNfT1NBx3f2zSeqO7aRAw==}
+  '@types/css-tree@2.3.10':
+    resolution: {integrity: sha512-WcaBazJ84RxABvRttQjjFWgTcHvZR9jGr0Y3hccPkHjFyk/a3N8EuxjKr+QfrwjoM5b1yI1Uj1i7EzOAAwBwag==}
 
   '@types/eslint-scope@3.7.7':
     resolution: {integrity: sha512-MzMFlSLBqNF2gcHWO0G1vP/YQyfvrxZ0bF+u7mzUdZ1/xK4A4sru+nraZz5i3iEIk1l1uyicaDVTB4QbbEkAYg==}
@@ -1019,7 +1019,7 @@ snapshots:
       path-browserify: 1.0.1
       tinyglobby: 0.2.10
 
-  '@types/css-tree@2.3.9': {}
+  '@types/css-tree@2.3.10': {}
 
   '@types/eslint-scope@3.7.7':
     dependencies:
