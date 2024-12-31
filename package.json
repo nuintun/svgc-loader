@@ -58,7 +58,7 @@
     "@rspack/core": "^1.1.8",
     "@types/css-tree": "^2.3.10",
     "@types/node": "^22.10.2",
-    "dts-paths": "^1.0.3",
+    "dts-paths": "^1.1.0",
     "magic-string": "^0.30.17",
     "prettier": "^3.4.2",
     "rimraf": "^6.0.1",
