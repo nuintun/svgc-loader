@@ -28,11 +28,11 @@ importers:
         specifier: ^2.3.10
         version: 2.3.10
       '@types/node':
-        specifier: ^22.10.2
-        version: 22.10.2
+        specifier: ^22.10.3
+        version: 22.10.3
       dts-paths:
-        specifier: ^1.1.0
-        version: 1.1.0(typescript@5.7.2)
+        specifier: ^1.1.1
+        version: 1.1.1(typescript@5.7.2)
       magic-string:
         specifier: ^0.30.17
         version: 0.30.17
@@ -307,8 +307,8 @@ packages:
   '@types/json-schema@7.0.15':
     resolution: {integrity: sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==}
 
-  '@types/node@22.10.2':
-    resolution: {integrity: sha512-Xxr6BBRCAOQixvonOye19wnzyDiUtTeqldOOmj3CkeblonbccA12PFwlufvRdrpjXxqnmUaeiU5EOA+7s5diUQ==}
+  '@types/node@22.10.3':
+    resolution: {integrity: sha512-DifAyw4BkrufCILvD3ucnuN8eydUfc/C1GlyrnI+LK6543w5/L3VeVgf05o3B4fqSXP1dKYLOZsKfutpxPzZrw==}
 
   '@webassemblyjs/ast@1.14.1':
     resolution: {integrity: sha512-nuBEDgQfm1ccRp/8bCQrx1frohyufl4JlbMMZ4P1wpeOfDhF6FQkxZJ1b/e+PLwr6X1Nhw6OLme5usuBWYBvuQ==}
@@ -475,8 +475,8 @@ packages:
   domutils@3.1.0:
     resolution: {integrity: sha512-H78uMmQtI2AhgDJjWeQmHwJJ2bLPD3GMmO7Zja/ZZh84wkm+4ut+IUnUdRa8uCGX88DiVx1j6FRe1XfxEgjEZA==}
 
-  dts-paths@1.1.0:
-    resolution: {integrity: sha512-lVLZuVe1cle8EM7DGOF1xArERZb/RTrJqejEsyrqOCvvYYHGnN/4X7Rf1/o9tOwY/6kL9pv5qzskxKf550zuFQ==}
+  dts-paths@1.1.1:
+    resolution: {integrity: sha512-lqLrAsr0Ds9A0+fkfourkByv486CsU6Y9fyNC+UNz4vX+EtIYK5UHRuGNZMc4LzCbAMc8dfLeOyei7JcO8M6hA==}
     peerDependencies:
       typescript: ^5.0.0
 
@@ -1096,7 +1096,7 @@ snapshots:
 
   '@types/json-schema@7.0.15': {}
 
-  '@types/node@22.10.2':
+  '@types/node@22.10.3':
     dependencies:
       undici-types: 6.20.0
 
@@ -1293,7 +1293,7 @@ snapshots:
       domelementtype: 2.3.0
       domhandler: 5.0.3
 
-  dts-paths@1.1.0(typescript@5.7.2):
+  dts-paths@1.1.1(typescript@5.7.2):
     dependencies:
       ts-morph: 25.0.0
       tslib: 2.8.1
@@ -1412,7 +1412,7 @@ snapshots:
 
   jest-worker@27.5.1:
     dependencies:
-      '@types/node': 22.10.2
+      '@types/node': 22.10.3
       merge-stream: 2.0.0
       supports-color: 8.1.1
 
