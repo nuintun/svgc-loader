@@ -9,7 +9,7 @@ import { LoaderDefinition } from 'webpack';
 import { convert, SvgcTemplate, SvgcTemplateOptions } from './svgc';
 
 // 导出接口定义
-export { Options, SvgcTemplate, SvgcTemplateOptions };
+export { Config as SvgoOptions, Options, SvgcTemplate, SvgcTemplateOptions };
 
 async function resolveConfig(configFile?: string | false, context?: string): Promise<Config | null> {
   // 如果禁用配置文件，返回 null
