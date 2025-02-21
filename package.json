@@ -25,6 +25,7 @@
     "svgo",
     "react",
     "loader",
+    "rspack",
     "webpack"
   ],
   "author": {
