@@ -131,20 +131,10 @@ export function convertXastAttributes(
   let attrs = '';
 
   for (const [name, value] of props) {
-    attrs += `${name}=${value}`;
+    attrs += ` ${name}=${value}`;
   }
 
-  const hasAttrs = attrs !== '';
-
-  if (canSetProps) {
-    if (hasAttrs) {
-      return ` ${attrs} {...${propsName}}`;
-    }
-
-    return ` {...${propsName}}`;
-  }
-
-  return hasAttrs ? ` ${attrs}` : attrs;
+  return canSetProps ? `${attrs} {...${propsName}}` : attrs;
 }
 
 /**
