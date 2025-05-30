@@ -28,8 +28,8 @@ importers:
         specifier: ^2.3.10
         version: 2.3.10
       '@types/node':
-        specifier: ^22.15.23
-        version: 22.15.23
+        specifier: ^22.15.26
+        version: 22.15.26
       dts-paths:
         specifier: ^1.1.7
         version: 1.1.7(typescript@5.8.3)
@@ -314,8 +314,8 @@ packages:
   '@types/json-schema@7.0.15':
     resolution: {integrity: sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==}
 
-  '@types/node@22.15.23':
-    resolution: {integrity: sha512-7Ec1zaFPF4RJ0eXu1YT/xgiebqwqoJz8rYPDi/O2BcZ++Wpt0Kq9cl0eg6NN6bYbPnR67ZLo7St5Q3UK0SnARw==}
+  '@types/node@22.15.26':
+    resolution: {integrity: sha512-lgISkNrqdQ5DAzjBhnDNGKDuXDNo7/1V4FhNzsKREhWLZTOELQAptuAnJMzHtUl1qyEBBy9lNBKQ9WjyiSloTw==}
 
   '@webassemblyjs/ast@1.14.1':
     resolution: {integrity: sha512-nuBEDgQfm1ccRp/8bCQrx1frohyufl4JlbMMZ4P1wpeOfDhF6FQkxZJ1b/e+PLwr6X1Nhw6OLme5usuBWYBvuQ==}
@@ -413,16 +413,16 @@ packages:
     resolution: {integrity: sha512-yQbXgO/OSZVD2IsiLlro+7Hf6Q18EJrKSEsdoMzKePKXct3gvD8oLcOQdIzGupr5Fj+EDe8gO/lxc1BzfMpxvA==}
     engines: {node: '>=8'}
 
-  browserslist@4.24.5:
-    resolution: {integrity: sha512-FDToo4Wo82hIdgc1CQ+NQD0hEhmpPjrZ3hiUgwgOG6IuTdlpr8jdjyG24P6cNP1yJpTLzS5OcGgSw0xmDU1/Tw==}
+  browserslist@4.25.0:
+    resolution: {integrity: sha512-PJ8gYKeS5e/whHBh8xrwYK+dAvEj7JXtz6uTucnMRB8OiGTsKccFekoRrjajPBHV8oOY+2tI4uxeceSimKwMFA==}
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
 
   buffer-from@1.1.2:
     resolution: {integrity: sha512-E+XQCRwSbaaiChtv6k6Dwgc+bx+Bs6vuKJHHl5kox/BaKbhiXzqQOwK4cO22yElGp2OCmjwVhT3HmxgyPGnJfQ==}
 
-  caniuse-lite@1.0.30001718:
-    resolution: {integrity: sha512-AflseV1ahcSunK53NfEs9gFWgOEmzr0f+kaMFA4xiLZlr9Hzt7HxcSpIFcnNCUkz6R6dWKa54rUz3HUmI3nVcw==}
+  caniuse-lite@1.0.30001720:
+    resolution: {integrity: sha512-Ec/2yV2nNPwb4DnTANEV99ZWwm3ZWfdlfkQbWSDDt+PsXEVYwlhPH8tdMaPunYTKKmz7AnHi2oNEi1GcmKCD8g==}
 
   chrome-trace-event@1.0.4:
     resolution: {integrity: sha512-rNjApaLzuwaOTjCiT8lSDdGN1APCiqkChLMJxJPWLunPAt5fy8xgU9/jNOchV84wfIxrA0lRQB7oCT8jrn/wrQ==}
@@ -493,8 +493,8 @@ packages:
   eastasianwidth@0.2.0:
     resolution: {integrity: sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==}
 
-  electron-to-chromium@1.5.159:
-    resolution: {integrity: sha512-CEvHptWAMV5p6GJ0Lq8aheyvVbfzVrv5mmidu1D3pidoVNkB3tTBsTMVtPJ+rzRK5oV229mCLz9Zj/hNvU8GBA==}
+  electron-to-chromium@1.5.161:
+    resolution: {integrity: sha512-hwtetwfKNZo/UlwHIVBlKZVdy7o8bIZxxKs0Mv/ROPiQQQmDgdm5a+KvKtBsxM8ZjFzTaCeLoodZ8jiBE3o9rA==}
 
   emoji-regex@8.0.0:
     resolution: {integrity: sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==}
@@ -1083,7 +1083,7 @@ snapshots:
       '@module-federation/runtime-tools': 0.14.0
       '@rspack/binding': 1.3.12
       '@rspack/lite-tapable': 1.0.1
-      caniuse-lite: 1.0.30001718
+      caniuse-lite: 1.0.30001720
 
   '@rspack/lite-tapable@1.0.1': {}
 
@@ -1111,7 +1111,7 @@ snapshots:
 
   '@types/json-schema@7.0.15': {}
 
-  '@types/node@22.15.23':
+  '@types/node@22.15.26':
     dependencies:
       undici-types: 6.21.0
 
@@ -1235,16 +1235,16 @@ snapshots:
     dependencies:
       fill-range: 7.1.1
 
-  browserslist@4.24.5:
+  browserslist@4.25.0:
     dependencies:
-      caniuse-lite: 1.0.30001718
-      electron-to-chromium: 1.5.159
+      caniuse-lite: 1.0.30001720
+      electron-to-chromium: 1.5.161
       node-releases: 2.0.19
-      update-browserslist-db: 1.1.3(browserslist@4.24.5)
+      update-browserslist-db: 1.1.3(browserslist@4.25.0)
 
   buffer-from@1.1.2: {}
 
-  caniuse-lite@1.0.30001718: {}
+  caniuse-lite@1.0.30001720: {}
 
   chrome-trace-event@1.0.4: {}
 
@@ -1321,7 +1321,7 @@ snapshots:
 
   eastasianwidth@0.2.0: {}
 
-  electron-to-chromium@1.5.159: {}
+  electron-to-chromium@1.5.161: {}
 
   emoji-regex@8.0.0: {}
 
@@ -1430,7 +1430,7 @@ snapshots:
 
   jest-worker@27.5.1:
     dependencies:
-      '@types/node': 22.15.23
+      '@types/node': 22.15.26
       merge-stream: 2.0.0
       supports-color: 8.1.1
 
@@ -1652,9 +1652,9 @@ snapshots:
 
   undici-types@6.21.0: {}
 
-  update-browserslist-db@1.1.3(browserslist@4.24.5):
+  update-browserslist-db@1.1.3(browserslist@4.25.0):
     dependencies:
-      browserslist: 4.24.5
+      browserslist: 4.25.0
       escalade: 3.2.0
       picocolors: 1.1.1
 
@@ -1674,7 +1674,7 @@ snapshots:
       '@webassemblyjs/wasm-edit': 1.14.1
       '@webassemblyjs/wasm-parser': 1.14.1
       acorn: 8.14.1
-      browserslist: 4.24.5
+      browserslist: 4.25.0
       chrome-trace-event: 1.0.4
       enhanced-resolve: 5.18.1
       es-module-lexer: 1.7.0
