@@ -43,43 +43,45 @@ export const schema: Schema = {
     plugins: {
       type: 'array',
       description: 'Plugins for svgc convert.',
-      items: [
-        {
-          type: 'string',
-          description: 'Name of svgo plugin.'
-        },
-        {
-          type: 'object',
-          properties: {
-            name: {
-              type: 'string',
-              description: 'Name of svgo plugin.'
-            },
-            params: {
-              type: 'object',
-              additionalProperties: true,
-              description: 'Params of svgo plugin.'
-            }
+      items: {
+        anyOf: [
+          {
+            type: 'string',
+            description: 'Name of svgo plugin.'
           },
-          required: ['name'],
-          additionalProperties: false
-        },
-        {
-          type: 'object',
-          properties: {
-            name: {
-              type: 'string',
-              description: 'Name of svgo plugin.'
+          {
+            type: 'object',
+            properties: {
+              name: {
+                type: 'string',
+                description: 'Name of svgo plugin.'
+              },
+              params: {
+                type: 'object',
+                additionalProperties: true,
+                description: 'Params of svgo plugin.'
+              }
             },
-            fn: {
-              instanceof: 'Function',
-              description: 'Processor of svgo plugin.'
-            }
+            required: ['name'],
+            additionalProperties: false
           },
-          required: ['name', 'fn'],
-          additionalProperties: false
-        }
-      ]
+          {
+            type: 'object',
+            properties: {
+              name: {
+                type: 'string',
+                description: 'Name of svgo plugin.'
+              },
+              fn: {
+                instanceof: 'Function',
+                description: 'Processor of svgo plugin.'
+              }
+            },
+            required: ['name', 'fn'],
+            additionalProperties: false
+          }
+        ]
+      }
     },
     js2svg: {
       type: 'object',
