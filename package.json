@@ -57,9 +57,9 @@
   },
   "devDependencies": {
     "@rollup/plugin-typescript": "^12.1.4",
-    "@rspack/core": "^1.4.4",
+    "@rspack/core": "^1.4.5",
     "@types/css-tree": "^2.3.10",
-    "@types/node": "^24.0.10",
+    "@types/node": "^24.0.12",
     "dts-paths": "^1.1.9",
     "magic-string": "^0.30.17",
     "prettier": "^3.6.2",
