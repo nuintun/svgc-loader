@@ -60,13 +60,13 @@
     "@rspack/core": "^1.4.5",
     "@types/css-tree": "^2.3.10",
     "@types/node": "^24.0.12",
-    "dts-paths": "^1.1.9",
+    "dts-paths": "^1.1.10",
     "magic-string": "^0.30.17",
     "prettier": "^3.6.2",
     "rimraf": "^6.0.1",
     "rollup": "^4.44.2",
     "typescript": "^5.8.3",
-    "webpack": "^5.99.9"
+    "webpack": "^5.100.0"
   },
   "peerDependencies": {
     "@rspack/core": "^1.0.0",
