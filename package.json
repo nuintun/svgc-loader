@@ -1,6 +1,6 @@
 {
   "name": "svgc-loader",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "description": "SVG component loader.",
   "type": "module",
   "main": "cjs/index.cjs",
@@ -57,16 +57,16 @@
   },
   "devDependencies": {
     "@rollup/plugin-typescript": "^12.1.4",
-    "@rspack/core": "^1.4.5",
+    "@rspack/core": "^1.4.11",
     "@types/css-tree": "^2.3.10",
-    "@types/node": "^24.0.12",
-    "dts-paths": "^1.1.10",
+    "@types/node": "^24.1.0",
+    "dts-paths": "^1.1.11",
     "magic-string": "^0.30.17",
     "prettier": "^3.6.2",
     "rimraf": "^6.0.1",
-    "rollup": "^4.44.2",
-    "typescript": "^5.8.3",
-    "webpack": "^5.100.0"
+    "rollup": "^4.46.2",
+    "typescript": "^5.9.2",
+    "webpack": "^5.101.0"
   },
   "peerDependencies": {
     "@rspack/core": "^1.0.0",
