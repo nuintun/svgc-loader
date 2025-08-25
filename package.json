@@ -61,7 +61,6 @@
     "@types/css-tree": "^2.3.10",
     "@types/node": "^24.3.0",
     "dts-paths": "^1.1.11",
-    "magic-string": "^0.30.18",
     "prettier": "^3.6.2",
     "rimraf": "^6.0.1",
     "rollup": "^4.48.0",
