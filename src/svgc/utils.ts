@@ -5,7 +5,7 @@
 import { Options } from './interface';
 import { basename, extname } from 'node:path';
 import { generate, parse, walk } from 'css-tree';
-import { XastElement, XastNode, XastParent } from 'svgo/lib/types';
+import { XastElement, XastNode, XastParent } from 'svgo';
 
 export const propsName = 'props';
 

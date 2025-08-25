@@ -2,8 +2,8 @@
  * @module xast
  */
 
+import { XastNode } from 'svgo';
 import { Plugin } from '/svgc/interface';
-import { XastNode } from 'svgo/lib/types';
 
 /**
  * @function svgcXast
