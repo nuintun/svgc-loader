@@ -6,7 +6,7 @@ import { Plugin } from '/svgc/interface';
 import { reactAttributes, reactNativeSvgTags } from './mappings';
 
 export const enum Target {
-  PReact = 'preact',
+  Preact = 'preact',
   ReactDOM = 'react-dom',
   ReactNative = 'react-native'
 }

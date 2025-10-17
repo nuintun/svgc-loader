@@ -77,7 +77,7 @@ export default ${componentName};
  */
 export function getTemplate(target: `${Target}`): SvgcTemplate | never {
   switch (target) {
-    case Target.PReact:
+    case Target.Preact:
       return preactTemplate;
     case Target.ReactDOM:
       return reactDOMTemplate;
