@@ -57,12 +57,12 @@
   },
   "devDependencies": {
     "@rollup/plugin-typescript": "^12.3.0",
-    "@rspack/core": "^1.5.8",
+    "@rspack/core": "^1.6.0",
     "@types/css-tree": "^2.3.11",
-    "@types/node": "^24.9.1",
+    "@types/node": "^24.10.0",
     "dts-paths": "^1.1.13",
     "prettier": "^3.6.2",
-    "rimraf": "^6.0.1",
+    "rimraf": "^6.1.0",
     "rollup": "^4.52.5",
     "typescript": "^5.9.3",
     "webpack": "^5.102.1"
