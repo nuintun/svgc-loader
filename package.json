@@ -57,15 +57,15 @@
   },
   "devDependencies": {
     "@rollup/plugin-typescript": "^12.3.0",
-    "@rspack/core": "^1.7.0",
+    "@rspack/core": "^1.7.5",
     "@types/css-tree": "^2.3.11",
-    "@types/node": "^25.0.3",
+    "@types/node": "^25.2.0",
     "dts-paths": "^1.1.15",
-    "prettier": "^3.7.4",
+    "prettier": "^3.8.1",
     "rimraf": "^6.1.2",
-    "rollup": "^4.54.0",
+    "rollup": "^4.57.1",
     "typescript": "^5.9.3",
-    "webpack": "^5.104.1"
+    "webpack": "^5.105.0"
   },
   "peerDependencies": {
     "@rspack/core": "^1.0.0",
