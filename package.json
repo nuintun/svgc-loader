@@ -1,6 +1,6 @@
 {
   "name": "svgc-loader",
-  "version": "0.5.7",
+  "version": "0.5.8",
   "description": "SVG component loader.",
   "type": "module",
   "main": "cjs/index.cjs",
@@ -59,8 +59,8 @@
     "@rollup/plugin-typescript": "^12.3.0",
     "@rspack/core": "^1.7.5",
     "@types/css-tree": "^2.3.11",
-    "@types/node": "^25.2.0",
-    "dts-paths": "^1.1.15",
+    "@types/node": "^25.2.1",
+    "dts-paths": "^1.1.16",
     "prettier": "^3.8.1",
     "rimraf": "^6.1.2",
     "rollup": "^4.57.1",
