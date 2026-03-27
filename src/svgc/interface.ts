@@ -24,8 +24,9 @@ export type ArrayItem<T> = T extends Array<infer I> ? I : never;
 
 export interface Options extends Omit<Config, 'path' | 'datauri'> {
   svg: string;
+  path: string;
   target?: `${Target}`;
   template?: SvgcTemplate;
   configFile?: string | false;
-  svgProps: Record<string, unknown>;
+  svgProps?: Record<string, unknown>;
 }

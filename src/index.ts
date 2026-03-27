@@ -2,16 +2,19 @@
  * @module index
  */
 
+import { convert } from './svgc';
 import { schema } from './schema';
 import { Options } from './interface';
 import { Config, loadConfig } from 'svgo';
 import { LoaderDefinition } from 'webpack';
-import { convert, SvgcTemplate, SvgcTemplateOptions } from './svgc';
 
 // 导出接口定义
-export { Config as SvgoOptions, Options, SvgcTemplate, SvgcTemplateOptions };
+export { Options };
 
-async function resolveConfig(configFile?: string | false, context?: string): Promise<Config | null> {
+async function resolveConfig(
+  configFile?: string | false,
+  context?: string
+): Promise<Config | null> {
   // 如果禁用配置文件，返回 null
   if (configFile === false) {
     return null;
@@ -29,7 +32,7 @@ async function resolveConfig(configFile?: string | false, context?: string): Pro
 /**
  * @function loader
  */
-const loader: LoaderDefinition<Options> = function (content, sourceMap, additionalData) {
+export const loader: LoaderDefinition<Options> = function (content, sourceMap, additionalData) {
   const callback = this.async();
   const path = this.resourcePath;
   const { configFile, ...options } = this.getOptions(schema);
@@ -50,5 +53,3 @@ const loader: LoaderDefinition<Options> = function (content, sourceMap, addition
     }
   );
 };
-
-export default loader;

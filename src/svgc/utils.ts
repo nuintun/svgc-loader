@@ -41,7 +41,7 @@ export function pascalcase(string: string): string {
  * @param path 文件路径
  */
 export function getComponentName(path: string): string {
-  return `Svgc_${pascalcase(basename(path, extname(path)))}`;
+  return `Svgc${pascalcase(basename(path, extname(path)))}`;
 }
 
 /**

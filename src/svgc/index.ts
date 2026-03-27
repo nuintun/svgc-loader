@@ -10,7 +10,7 @@ import { svgcTarget, Target } from './plugins/target';
 import { convertXast, getComponentName, propsName } from './utils';
 
 // 导出接口定义
-export * from './interface';
+export { Options };
 
 /**
  * @function convert
@@ -27,7 +27,7 @@ export function convert({
   target = Target.ReactDOM,
   plugins = ['preset-default'],
   template = getTemplate(target)
-}: Options & { path: string }): Promise<string> {
+}: Options): Promise<string> {
   return new Promise(resolve => {
     optimize(svg, {
       path,

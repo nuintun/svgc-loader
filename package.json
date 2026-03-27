@@ -1,14 +1,21 @@
 {
   "name": "svgc-loader",
-  "version": "0.5.10",
+  "version": "0.6.0",
   "description": "SVG component loader.",
   "type": "module",
   "main": "cjs/index.cjs",
   "module": "esm/index.js",
   "exports": {
-    "import": "./esm/index.js",
-    "require": "./cjs/index.cjs",
-    "default": "./esm/index.js"
+    ".": {
+      "import": "./esm/index.js",
+      "require": "./cjs/index.cjs",
+      "default": "./esm/index.js"
+    },
+    "./convert": {
+      "import": "./esm/svgc/index.js",
+      "require": "./cjs/svgc/index.cjs",
+      "default": "./esm/svgc/index.js"
+    }
   },
   "files": [
     "cjs",
@@ -41,19 +48,18 @@
   "scripts": {
     "lint": "tsc --noEmit",
     "pretest": "pnpm build:main",
-    "test": "node tests/index.js",
-    "clean": "node tools/clean.js",
+    "test": "node tests/index.ts",
+    "clean": "node tools/clean.ts",
     "prepublishOnly": "pnpm build",
-    "build:cjs": "rollup -c tools/rollup.cjs.js",
-    "build:esm": "rollup -c tools/rollup.esm.js",
-    "build:fix-types": "node tools/fix-types.js",
+    "build:cjs": "rollup -c tools/rollup.cjs.ts",
+    "build:esm": "rollup -c tools/rollup.esm.ts",
+    "build:fix-types": "node tools/fix-types.ts",
     "build": "pnpm clean && pnpm build:main && pnpm format",
     "format": "prettier --write . --ignore-path .prettierignore",
     "build:main": "pnpm build:cjs && pnpm build:esm && pnpm build:fix-types"
   },
   "dependencies": {
     "css-tree": "^3.2.1",
-    "svgo": "^4.0.1",
     "tslib": "^2.8.1"
   },
   "devDependencies": {
@@ -65,6 +71,7 @@
     "prettier": "^3.8.1",
     "rimraf": "^6.1.3",
     "rollup": "^4.60.0",
+    "svgo": "^4.0.1",
     "typescript": "^6.0.2",
     "webpack": "^5.105.4"
   },
@@ -73,6 +80,7 @@
     "preact": "*",
     "react": "*",
     "react-native-svg": "*",
+    "svgo": "^4.0.0",
     "webpack": "^5.0.0"
   },
   "peerDependenciesMeta": {
