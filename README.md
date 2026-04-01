@@ -10,7 +10,7 @@
 > [![Side Effect][side-effect-image]][bundle-phobia-url]
 > [![License][license-image]][license-url]
 
-## Installation
+## Install
 
 ```bash
 npm i -D svgc-loader svgo
