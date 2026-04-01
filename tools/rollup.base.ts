@@ -9,10 +9,10 @@ import pkg from '../package.json' with { type: 'json' };
 
 const externals = [
   // @ts-ignore
-  // Dependencies
+  // dependencies
   ...Object.keys(pkg.dependencies ?? {}),
   // @ts-ignore
-  // Peer dependencies
+  // peer dependencies
   ...Object.keys(pkg.peerDependencies ?? {})
 ];
 
@@ -28,11 +28,14 @@ const banner = `/**
 `;
 
 /**
- * @function rollup
- * @param {boolean} [esnext] Is esnext
- * @return {import('rollup').RollupOptions}
+ * @function createConfig
+ * @description create rollup configuration
+ * @param esnext is esnext
+ * @param bundler bundler name
  */
-export default function rollup(esnext = false): RollupOptions {
+function createConfig(esnext: boolean, bundler: string): RollupOptions {
+  const root = esnext ? 'esm' : 'cjs';
+
   return {
     input: 'src/index.ts',
     output: {
@@ -41,7 +44,7 @@ export default function rollup(esnext = false): RollupOptions {
       exports: 'auto',
       esModule: false,
       preserveModules: true,
-      dir: esnext ? 'esm' : 'cjs',
+      dir: `${root}/${bundler}`,
       format: esnext ? 'esm' : 'cjs',
       generatedCode: { constBindings: true },
       entryFileNames: `[name].${esnext ? 'js' : 'cjs'}`,
@@ -50,7 +53,7 @@ export default function rollup(esnext = false): RollupOptions {
     plugins: [
       typescript({
         declaration: true,
-        declarationDir: esnext ? 'esm' : 'cjs'
+        declarationDir: `${root}/${bundler}`
       })
     ],
     onwarn(error, warn) {
@@ -72,4 +75,13 @@ export default function rollup(esnext = false): RollupOptions {
       return false;
     }
   };
+}
+
+/**
+ * @function rollup
+ * @description rollup configuration
+ * @param {boolean} [esnext] is esnext
+ */
+export default function rollup(esnext = false): RollupOptions[] {
+  return [createConfig(esnext, 'rspack'), createConfig(esnext, 'webpack')];
 }
