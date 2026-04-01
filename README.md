@@ -10,6 +10,99 @@
 > [![Side Effect][side-effect-image]][bundle-phobia-url]
 > [![License][license-image]][license-url]
 
+## Installation
+
+```bash
+npm i -D svgc-loader svgo
+# or
+pnpm add -D svgc-loader svgo
+# or
+yarn add -D svgc-loader svgo
+```
+
+> `svgc-loader` requires Node.js `>=16`.
+
+## Usage
+
+### Webpack
+
+```js
+// webpack.config.js
+module.exports = {
+  module: {
+    rules: [
+      {
+        test: /\.svg$/i,
+        issuer: /\.[jt]sx?$/i,
+        use: [
+          {
+            loader: 'svgc-loader',
+            options: {
+              target: 'react-dom',
+              plugins: ['preset-default']
+            }
+          }
+        ]
+      }
+    ]
+  }
+};
+```
+
+### Rspack
+
+```js
+// rspack.config.js
+export default {
+  module: {
+    rules: [
+      {
+        test: /\.svg$/i,
+        issuer: /\.[jt]sx?$/i,
+        use: [
+          {
+            loader: 'svgc-loader/rspack',
+            options: {
+              target: 'react-dom',
+              plugins: ['preset-default']
+            }
+          }
+        ]
+      }
+    ]
+  }
+};
+```
+
+### Import SVG as Component
+
+```tsx
+import Logo from './logo.svg';
+
+export function App() {
+  return <Logo width={120} height={120} aria-label="logo" />;
+}
+```
+
+## Loader Options
+
+All options are compatible with SVGO v4 and support extra component-conversion options:
+
+- `configFile?: string | false` - path to SVGO config file, or `false` to disable config-file loading.
+- `target?: 'preact' | 'react-dom' | 'react-native'` - output runtime target.
+- `svgProps?: Record<string, unknown>` - extra props merged into the generated `<svg />`.
+- `template?: (options) => string` - custom code template for component generation.
+- `multipass?: boolean` - run SVGO in multipass mode.
+- `floatPrecision?: number` - precision for SVGO plugins that support it.
+- `plugins?: Array<string | { name: string; params?: object } | { name: string; fn: Function }>` - SVGO plugins.
+- `js2svg?: object` - SVGO js2svg output formatting options.
+
+## Notes
+
+- Default `target` is `react-dom`.
+- Default SVGO plugin list is `['preset-default']`.
+- You can provide your own `template` to fully control emitted component code.
+
 [npm-image]: https://img.shields.io/npm/v/svgc-loader?style=flat-square
 [npm-url]: https://www.npmjs.org/package/svgc-loader
 [download-image]: https://img.shields.io/npm/dm/svgc-loader?style=flat-square
