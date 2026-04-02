@@ -3,6 +3,7 @@
   "version": "0.6.0",
   "description": "SVG component loader.",
   "type": "module",
+  "sideEffects": false,
   "exports": {
     ".": {
       "import": "./esm/webpack/index.js",
