@@ -3,8 +3,6 @@
   "version": "0.6.0",
   "description": "SVG component loader.",
   "type": "module",
-  "main": "cjs/index.cjs",
-  "module": "esm/index.js",
   "exports": {
     ".": {
       "import": "./esm/webpack/index.js",
