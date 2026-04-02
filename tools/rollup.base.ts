@@ -52,6 +52,7 @@ function createConfig(esnext: boolean, bundler: string): RollupOptions {
     },
     plugins: [
       typescript({
+        rootDir: 'src',
         declaration: true,
         declarationDir: `${root}/${bundler}`
       })

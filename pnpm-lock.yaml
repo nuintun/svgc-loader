@@ -28,8 +28,8 @@ importers:
         specifier: ^25.5.0
         version: 25.5.0
       dts-paths:
-        specifier: ^2.2.0
-        version: 2.2.0(typescript@6.0.2)
+        specifier: ^2.2.1
+        version: 2.2.1(typescript@6.0.2)
       prettier:
         specifier: ^3.8.1
         version: 3.8.1
@@ -475,13 +475,13 @@ packages:
   domutils@3.2.2:
     resolution: {integrity: sha512-6kZKyUajlDuqlHKVX1w7gyslj9MPIXzIFiz/rGu35uC1wMi+kMhQwGhl4lt9unC9Vb9INnY9Z3/ZA3+FhASLaw==}
 
-  dts-paths@2.2.0:
-    resolution: {integrity: sha512-gNXKnAtb3iTCtE5AwIik2gdPJEgDVkh9xJxrtFJu2gdb3Iv1IpRxj4Z+iGIrqllPpAfgDlY9NA1bVOfxnh1NVw==}
+  dts-paths@2.2.1:
+    resolution: {integrity: sha512-ftfo1dMnp6FS/0BiEJm3AGo9DnrE0aw7X3WLPKUBwDVFbC4v5lgJIgsKgDmQRhBQdB3L0T0c7hSjneVAfo/XoQ==}
     peerDependencies:
       typescript: '>=5.0.0'
 
-  electron-to-chromium@1.5.330:
-    resolution: {integrity: sha512-jFNydB5kFtYUobh4IkWUnXeyDbjf/r9gcUEXe1xcrcUxIGfTdzPXA+ld6zBRbwvgIGVzDll/LTIiDztEtckSnA==}
+  electron-to-chromium@1.5.331:
+    resolution: {integrity: sha512-IbxXrsTlD3hRodkLnbxAPP4OuJYdWCeM3IOdT+CpcMoIwIoDfCmRpEtSPfwBXxVkg9xmBeY7Lz2Eo2TDn/HC3Q==}
 
   enhanced-resolve@5.20.1:
     resolution: {integrity: sha512-Qohcme7V1inbAfvjItgw0EaxVX5q2rdVEZHRBrEQdRZTssLDGsL8Lwrznl8oQ/6kuTJONLaDcGjkNP247XEhcA==}
@@ -606,8 +606,8 @@ packages:
   neo-async@2.6.2:
     resolution: {integrity: sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==}
 
-  node-releases@2.0.36:
-    resolution: {integrity: sha512-TdC8FSgHz8Mwtw9g5L4gR/Sh9XhSP/0DEkQxfEFXOpiul5IiHgHan2VhYYb6agDSfp4KuvltmGApc8HMgUrIkA==}
+  node-releases@2.0.37:
+    resolution: {integrity: sha512-1h5gKZCF+pO/o3Iqt5Jp7wc9rH3eJJ0+nh/CIoiRwjRxde/hAHyLPXYN4V3CqKAbiZPSeJFSWHmJsbkicta0Eg==}
 
   nth-check@2.1.1:
     resolution: {integrity: sha512-lqjrjmaOoAnWfMmBPL+XNnynZh2+swxiX3WUE0s4yEHI6m+AwrK2UZOimIRl3X/4QctVqS8AiZjFqyOGrMXb/w==}
@@ -1112,8 +1112,8 @@ snapshots:
     dependencies:
       baseline-browser-mapping: 2.10.13
       caniuse-lite: 1.0.30001784
-      electron-to-chromium: 1.5.330
-      node-releases: 2.0.36
+      electron-to-chromium: 1.5.331
+      node-releases: 2.0.37
       update-browserslist-db: 1.2.3(browserslist@4.28.2)
 
   buffer-from@1.1.2: {}
@@ -1168,14 +1168,14 @@ snapshots:
       domelementtype: 2.3.0
       domhandler: 5.0.3
 
-  dts-paths@2.2.0(typescript@6.0.2):
+  dts-paths@2.2.1(typescript@6.0.2):
     dependencies:
       magic-string: 0.30.21
       p-limit: 7.3.0
       tslib: 2.8.1
       typescript: 6.0.2
 
-  electron-to-chromium@1.5.330: {}
+  electron-to-chromium@1.5.331: {}
 
   enhanced-resolve@5.20.1:
     dependencies:
@@ -1272,7 +1272,7 @@ snapshots:
 
   neo-async@2.6.2: {}
 
-  node-releases@2.0.36: {}
+  node-releases@2.0.37: {}
 
   nth-check@2.1.1:
     dependencies:

@@ -65,7 +65,7 @@
     "@rspack/core": "^1.7.11",
     "@types/css-tree": "^2.3.11",
     "@types/node": "^25.5.0",
-    "dts-paths": "^2.2.0",
+    "dts-paths": "^2.2.1",
     "prettier": "^3.8.1",
     "react": "^19.2.4",
     "rimraf": "^6.1.3",
