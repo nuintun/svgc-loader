@@ -65,7 +65,7 @@
     "@rollup/plugin-typescript": "^12.3.0",
     "@rspack/core": "^1.7.11",
     "@types/css-tree": "^2.3.11",
-    "@types/node": "^25.5.0",
+    "@types/node": "^25.5.2",
     "dts-paths": "^2.2.1",
     "prettier": "^3.8.1",
     "react": "^19.2.4",
