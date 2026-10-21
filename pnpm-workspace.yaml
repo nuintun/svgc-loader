@@ -1,0 +1,2 @@
+minimumReleaseAgeExclude:
+  - dts-paths@2.2.2
